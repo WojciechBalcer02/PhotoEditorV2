@@ -16,32 +16,33 @@
 
         />
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="194dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:background="#FF0000"
+        android:src="#FF0000"
         android:layout_marginTop="50dp"
         android:id="@+id/red"
 
         />
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="194dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:background="#00FF00"
+        android:src="#00FF00"
         android:layout_marginTop="50dp"
         android:id="@+id/green"
 
         />
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="194dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:background="#0000FF"
+        android:src="#0000FF"
         android:layout_marginTop="50dp"
         android:id="@+id/blue"
 
         />
+
 
     <SeekBar
         android:id="@+id/visibility"

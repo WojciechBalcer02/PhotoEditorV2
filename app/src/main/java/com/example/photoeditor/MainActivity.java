@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         SeekBar redValue = findViewById(R.id.redValue);
         SeekBar greenValue = findViewById(R.id.greenValue);
         SeekBar blueValue = findViewById(R.id.blueValue);
-
+        red.setImageAlpha(0);
+        green.setImageAlpha(0);
+        blue.setImageAlpha(0);
         changeVisibility.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -91,18 +93,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        /*float redV = ((float)redValue.getProgress()/100);
-        float greenV = ((float)greenValue.getProgress());
-        float blueV = ((float)blueValue.getProgress());
-*/
-        /*float[] colorMatrix = {
-                1, 0, 0, 0, 0,
-                0, 0, 0, 0, 0,
-                0, 0, 0, 0, 0,
-                0, 0, 0, 1, 0
-        };
-
-        ColorFilter colorFilter = new ColorMatrixColorFilter(colorMatrix);
-        image.setColorFilter(colorFilter);*/
     }
 }
