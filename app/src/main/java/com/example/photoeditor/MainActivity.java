@@ -2,6 +2,9 @@ package com.example.photoeditor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.ColorFilter;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.SeekBar;
@@ -13,7 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ImageView image = findViewById(R.id.image);
+        ImageView red = findViewById(R.id.red);
+        ImageView green = findViewById(R.id.green);
+        ImageView blue = findViewById(R.id.blue);
         SeekBar changeVisibility = findViewById(R.id.visibility);
+        SeekBar redValue = findViewById(R.id.redValue);
+        SeekBar greenValue = findViewById(R.id.greenValue);
+        SeekBar blueValue = findViewById(R.id.blueValue);
 
         changeVisibility.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -32,5 +41,68 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        redValue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                red.setImageAlpha(i);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        greenValue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                green.setImageAlpha(i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        blueValue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+                blue.setImageAlpha(i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        /*float redV = ((float)redValue.getProgress()/100);
+        float greenV = ((float)greenValue.getProgress());
+        float blueV = ((float)blueValue.getProgress());
+*/
+        /*float[] colorMatrix = {
+                1, 0, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 1, 0
+        };
+
+        ColorFilter colorFilter = new ColorMatrixColorFilter(colorMatrix);
+        image.setColorFilter(colorFilter);*/
     }
 }
